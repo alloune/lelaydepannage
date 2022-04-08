@@ -22,5 +22,8 @@
 @yield('content')
 
 </div>
+    <footer>
+        Le Lay Dev.Web Copyright 2022
+    </footer>
 </body>
 </html>
