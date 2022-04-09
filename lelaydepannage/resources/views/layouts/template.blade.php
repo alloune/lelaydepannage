@@ -11,13 +11,14 @@
 </head>
 <body>
     <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Mes services</a>
-        <a href="#">Prise de rendez-vous</a>
-        <a href="#">Véhicules disponibles</a>
-        <a href="#">Contact</a>
+        <a href="{{ route('index') }}">Accueil</a>
+        <a href="{{ route('services') }}">Mes services</a>
+        <a href="{{ route('rdv') }}">Prise de rendez-vous</a>
+        <a href="{{ route('vehicule') }}">Véhicules disponibles</a>
+        <a href="{{ route('contact') }}">Contact</a>
         <div class="animation start-home"></div>
     </nav>
+@yield('contact')
 <div class="container">
 @yield('content')
 

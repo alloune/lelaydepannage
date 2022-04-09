@@ -1,3 +1,4 @@
+/****-----------NAVBAR -------------*************/
 nav {
     margin: 27px auto 0;
     position: relative;
@@ -70,13 +71,12 @@ nav .start-contact, a:nth-child(5):hover~.animation {
     left: 610px;
     background-color: #FF9000;
 }
-
+/****-----------Body -------------*************/
 body {
     font-size: 12px;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-
 }
 
 span {
@@ -84,7 +84,6 @@ span {
 }
 
 .container{
-
     width: 1400px;
     margin: 0 auto;
     position: relative;
@@ -102,17 +101,47 @@ span {
     flex-direction: row;
     gap: 50px;
 }
+
 .intro p{
     font-family: "Fira Code" ;
     font-size: 18px;
 }
+
 .intro h2{
     font-size: 25px;
 }
+
 .intro img{
         width: 600px;
 }
 
+#contact{
+    position: relative;
+    top: 50px;
+    height: 800px;
+    width:100%;
+    background-color: #4a5568;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
+
+.contactForm{
+    width: 60%;
+    height: max-content;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+.contactForm img{
+    height: auto;
+    width: 100%;
+}
+
+/****-----------Footer -------------*************/
 footer{
     position: relative;
     top: 200px;
