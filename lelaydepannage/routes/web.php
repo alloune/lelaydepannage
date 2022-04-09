@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Route::get('/rendez-vous', function () {return view('rendez_vous');})->name('rdv
 Route::get('/vehicules', function () {return view('articles');})->name('vehicule');
 Route::get('/contact', function () {return view('contact');})->name('contact');
 
+Route::resource('messages', MessageController::class);
 
 Route::get('/dashboard', function () {return view('dashboard');})->middleware(['auth'])->name('dashboard');
 
