@@ -8,6 +8,11 @@ nav {
     font-size: 0;
 
 }
+nav img{
+    width: 30%;
+    position: absolute;
+    left: -200px;
+}
 nav a {
     line-height: 50px;
     height: 100%;

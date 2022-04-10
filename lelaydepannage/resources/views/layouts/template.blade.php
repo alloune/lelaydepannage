@@ -11,6 +11,7 @@
 </head>
 <body>
     <nav>
+        <img class="headerLogo" src="{{ asset('logo.png') }}" alt="logo LLD">
         <a href="{{ route('index') }}">Accueil</a>
         <a href="{{ route('services') }}">Mes services</a>
         <a href="{{ route('rdv') }}">Prise de rendez-vous</a>
