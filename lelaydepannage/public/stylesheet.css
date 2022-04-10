@@ -120,30 +120,73 @@ span {
     top: 50px;
     height: 800px;
     width:100%;
-    background-color: #4a5568;
     display: flex;
     justify-content: center;
     align-items:center ;
+
 }
 
 .contactForm{
     width: 60%;
-    height: max-content;
-    background-color: white;
+    height: 80%;
+    background-color: #4a5568;
     display: flex;
     flex-direction: row;
+
 }
 
 .contactForm img{
     height: auto;
     width: 100%;
+
 }
 
 form{
+    color: white;
+    position: relative;
+    top: 50px;
     display: flex;
     flex-direction: column;
+    gap: 50px
+}
+#contact1{
+    display: flex;
+    flex-direction: column;
+
+   padding-left: 10%;
+}
+#contact2{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
 }
 
+.inputForm{
+    width: 50%;
+    color: white;
+    font-size: 18px;
+}
+input, select{
+    border-radius: 5px;
+    width: 80%;
+
+}
+
+.submit{
+    width: 100%;
+}
+
+.inputForm h3{
+    text-align:center;
+}
+.infoContact{
+
+    background-color: #FF9000 ;
+    width: 50%;
+    text-align: center;
+    padding-top: 100px;
+}
 /****-----------Footer -------------*************/
 footer{
     position: relative;
