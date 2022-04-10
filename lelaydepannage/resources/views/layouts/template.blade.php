@@ -10,8 +10,9 @@
 
 </head>
 <body>
+
     <nav>
-        <img class="headerLogo" src="{{ asset('logo.png') }}" alt="logo LLD">
+{{--        <img class="headerLogo" src="{{ asset('logo.png') }}" alt="logo LLD">--}}
         <a href="{{ route('index') }}">Accueil</a>
         <a href="{{ route('services') }}">Mes services</a>
         <a href="{{ route('rdv') }}">Prise de rendez-vous</a>
@@ -25,7 +26,14 @@
 
 </div>
     <footer>
-        Le Lay Dev.Web Copyright 2022
+
+        <div class="favicon">
+            <img src="{{ asset('facebook.png') }}">
+            <img src="{{ asset('instagram.png') }}">
+            <img src="{{ asset('outlook.png') }}">
+
+        </div>
+        <p> Le Lay Dev.Web Copyright 2022</p>
     </footer>
 </body>
 </html>
