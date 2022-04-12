@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="info container col-6 justify-center text-dark ">
+    <img class="img-fluid" src="{{ asset('smartphone.png') }}">
     <p>07-88-59-69-66</p>
 
 
