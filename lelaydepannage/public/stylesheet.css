@@ -1,82 +1,23 @@
 /****-----------NAVBAR -------------*************/
-nav {
-    margin: 27px auto 0;
-    position: relative;
-    width: 710px;
-    height: 50px;
-    border-radius: 8px;
-    font-size: 0;
+
+nav img{
+    width: 50%;
+}
+nav ul li{
+    font-size: 23px;
 
 }
-nav img{
-    width: 30%;
-    position: absolute;
-    left: -200px;
-}
-nav a {
-    line-height: 50px;
-    height: 100%;
-    font-size: 15px;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    color: black;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-nav .animation {
-    position: absolute;
-    height: 100%;
-    top: 0;
-    z-index: 0;
-    transition: all .5s ease 0s;
-    border-radius: 15px;
-}
-a:nth-child(1) {
-    width: auto;
-}
-a:nth-child(2) {
-    width: auto;
-}
-a:nth-child(3) {
-    width: auto;
-}
-a:nth-child(4) {
-    width: auto;
-}
-/*a:nth-child(5) {*/
-/*    width: auto;*/
-/*}*/
-nav .start-home, a:nth-child(1):hover~.animation {
-    width: 80px;
-    left: 0px;
-    background-color: #FF9000;
-}
-nav .start-about, a:nth-child(2):hover~.animation {
-    width: 120px;
-    left: 85px;
-    background-color: #FF9000;
-}
-nav .start-blog, a:nth-child(3):hover~.animation {
-    width: 200px;
-    left: 210px;
-    background-color: #FF9000;
-}
-nav .start-portefolio, a:nth-child(4):hover~.animation {
-    width: 200px;
-    left: 410px;
-    background-color: #FF9000;
-}
-nav .start-contact, a:nth-child(5):hover~.animation {
-    width: 100px;
-    left: 610px;
-    background-color: #FF9000;
+
+
+#navbarNav{
+    gap: 70%;
 }
 /****-----------Body -------------*************/
+
+.container img{
+    width: 50%;
+}
+
 body {
     font-size: 12px;
     font-family: sans-serif;

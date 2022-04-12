@@ -2,12 +2,14 @@
 @section('title','Accueil - LLD')
 @section('content')
 
-    <div id="brandLogo">
-        <img src="{{ asset('logo.png') }}">
-    </div>
-    <div class="intro">
+<div class="info container col-6 justify-center text-dark ">
+    <p>07-88-59-69-66</p>
+
+
+</div>
+    <div class="container col-6 d-flex row">
         <img src="{{ asset('depannage_vieille_peugeot.jpg') }}">
-        <div class="primary-text">
+        <div class="col-6 primary-text">
             <h2>Épaviste, Débarras de ferraille</h2>
             <p>Comme vous le savez, l'heure est à l'écologie, au recyclage et la gestion au mieux des déchets.<br>
                 La fabrication de nouveau modèle de voiture demande de plus en plus de métaux et les gisements sont de
