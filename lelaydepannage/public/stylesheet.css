@@ -8,58 +8,17 @@ nav ul li{
 
 }
 
-
 #navbarNav{
     gap: 70%;
 }
 /****-----------Body -------------*************/
 
-.container img{
-    width: 50%;
+
+div{
+    border: 2px solid black;
 }
 
-body {
-    font-size: 12px;
-    font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
-}
 
-span {
-    color: #2BD6B4;
-}
-
-.container{
-    width: 1400px;
-    margin: 0 auto;
-    position: relative;
-    top: 100px;
-}
-
-#brandLogo{
-    text-align: center;
-}
-
-.intro{
-    position: relative;
-    top: 50px;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-}
-
-.intro p{
-    font-family: "Fira Code" ;
-    font-size: 18px;
-}
-
-.intro h2{
-    font-size: 25px;
-}
-
-.intro img{
-        width: 600px;
-}
 /*---------------- contact ----------*/
 #contact{
     position: relative;
@@ -134,13 +93,11 @@ input, select{
     padding-top: 100px;
 }
 /****-----------Footer -------------*************/
-footer{
-    position: relative;
-    top: 200px;
-    text-align: center;
-    font-weight: bold;
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    line-height: 60px;
+
 }
 
-footer img{
-    width: 56px;
-}
