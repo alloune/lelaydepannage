@@ -1,8 +1,23 @@
 /****-----------NAVBAR -------------*************/
+
 nav img{
-    width: 200px;
+    width: 50%;
+}
+nav ul li{
+    font-size: 23px;
+
+}
+
+
+#navbarNav{
+    gap: 70%;
 }
 /****-----------Body -------------*************/
+
+.container img{
+    width: 50%;
+}
+
 body {
     font-size: 12px;
     font-family: sans-serif;
