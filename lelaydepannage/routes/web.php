@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,8 @@ Route::get('/vehicules', function () {return view('articles');})->name('vehicule
 Route::get('/contact', function () {return view('contact');})->name('contact');
 
 Route::resource('messages', MessageController::class);
+
+Route::resource('articles', ArticleController::class);
 
 Route::get('/dashboard', function () {return view('dashboard');})->middleware(['auth'])->name('dashboard');
 

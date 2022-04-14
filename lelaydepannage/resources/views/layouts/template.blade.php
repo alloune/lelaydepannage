@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,26 +50,28 @@
         </ul>
     </div>
 </nav>
-<div class="container-fluid">
 
-    @yield('content')
+@yield('content')
 
-</div>
-<footer class="footer">
-    <div class="col row">
-        <p class="col">1</p>
-        <p class="col">2</p>
-        <p class="col">3</p>
-
+<footer class="footer container-fluid ">
+    <div class="col justify-content-center row">
+        <div class="col-2 justify-content-around row">
+            <img class="col-3 mx-auto" src="{{ asset('facebook.png') }}">
+            <img class="col-3 mx-auto" src="{{ asset('instagram.png') }}">
+            <img class="col-3 mx-auto" src="{{ asset('outlook.png') }}">
+        </div>
 
     </div>
-    <div class="col">
-       <p class="col">4</p>
+    <div class="col justify-content-center">
+        <p class="text-center"> Le Lay Dev.Web Copyright 2022</p>
     </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+
+<script src="{{ asset('script.js') }}"></script>
 </body>
 </html>
