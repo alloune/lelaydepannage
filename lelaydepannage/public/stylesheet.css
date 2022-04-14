@@ -11,13 +11,25 @@ nav ul li{
 #navbarNav{
     gap: 70%;
 }
+.cellNum{
+    position: relative;
+    top: 150px;
+
+}
+.cellNum img{
+    width: 60px;
+
+}
 /****-----------Body -------------*************/
 
 
-div{
-    border: 2px solid black;
+/*div{*/
+/*    border: 2px solid black;*/
+/*}*/
+.start{
+    position: relative;
+    top: 150px;
 }
-
 
 /*---------------- contact ----------*/
 /*.start{*/
@@ -102,18 +114,16 @@ div{
     top: 200px;
     color:black;
 }
+.services{
+    position: relative;
+    top: 200px;
+}
 /****-----------Footer -------------*************/
 .footer{
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    bottom: -250px;
     height: 60px;
     line-height: 60px;
 
-}
-.footer div{
-    border: 2px solid green;
-}
-.footer img{
-    border: 2px solid red;
 }
 

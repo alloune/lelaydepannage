@@ -50,7 +50,18 @@
         </ul>
     </div>
 </nav>
+<div class="cellNum container-fluid col-7 d-flex justify-content-end">
+    <div class="col col-3 d-flex row justify-content-end">
+        <div class="col align-self-center col-3">
+            <img class="img-fluid" src="{{ asset('smartphone.png') }}">
+        </div>
+        <div class="col col-8">
+            <p style="font-weight:bold;">Contactez moi !</p>
+            <p style="color:#FF9000;font-weight:bold;">07-88-59-69-66</p>
+        </div>
 
+    </div>
+</div>
 @yield('content')
 
 <footer class="footer container-fluid ">
