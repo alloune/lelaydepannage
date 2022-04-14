@@ -63,10 +63,4 @@ function validateDataVehicule() {
             validateStatus = 0
         }
     }
-
-    if(validateStatus){
-        let goToDB = '{{ route("articles.store") }}';
-        console.log(goToDB)
-    }
-
 }
