@@ -34,7 +34,8 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $toto = "toto";
+        dump($toto);
     }
 
     /**

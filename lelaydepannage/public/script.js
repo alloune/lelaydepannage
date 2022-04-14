@@ -2,7 +2,7 @@ console.log('test')
 
 
 function validateDataVehicule() {
-
+    let validateStatus = 1
     let articleToAdd =
         {
             'brand': '',
@@ -60,9 +60,13 @@ function validateDataVehicule() {
         if(!value){
             let toto = validateClientInput.find(element => element.id == key)
             $('#div'+key+'Input').append(`<div class="alert alert-warning">`+toto.phrase+`</div>`)
+            validateStatus = 0
         }
     }
 
-
+    if(validateStatus){
+        let goToDB = '{{ route("articles.store") }}';
+        console.log(goToDB)
+    }
 
 }
