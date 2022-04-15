@@ -34,8 +34,18 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $toto = "toto";
-        dump($toto);
+//        $articleToAdd = $request -> validate([
+//            "model" => 'required|max:40',
+//            "brand"=> 'required|max:40',
+//            "engine"=> 'required|max:40',
+//            "fuels"=> 'required|max:40',
+//            "km"=> 'required|max:40',
+//            "price"=> 'required|max:40',
+//            "image"=> 'required|max:40',
+//
+//
+//        ]);
+        dump('toto');
     }
 
     /**
