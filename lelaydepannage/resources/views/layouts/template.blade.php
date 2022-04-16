@@ -27,7 +27,7 @@
                 <a class="nav-link text-dark" href="{{ route('services') }}">Mes services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-warning" href="{{ route('vehicule') }}">Véhicules disponibles</a>
+                <a class="nav-link text-warning" href="{{ route('articles.index') }}">Véhicules disponibles</a>
             </li>
 
 

@@ -18,7 +18,6 @@ use App\Http\Controllers\ArticleController;
 Route::get('/', function () {return view('index');})->name('index');
 Route::get('/services', function () {return view('services');})->name('services');
 Route::get('/rendez-vous', function () {return view('rendez_vous');})->name('rdv');
-Route::get('/vehicules', function () {return view('articles');})->name('vehicule');
 Route::get('/contact', function () {return view('contact');})->name('contact');
 
 Route::resource('messages', MessageController::class);

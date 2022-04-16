@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -13,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $vehicules = Article::all();
+        return view('articles', compact('vehicules'));
     }
 
     /**
@@ -34,18 +36,29 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-//        $articleToAdd = $request -> validate([
-//            "model" => 'required|max:40',
-//            "brand"=> 'required|max:40',
-//            "engine"=> 'required|max:40',
-//            "fuels"=> 'required|max:40',
-//            "km"=> 'required|max:40',
-//            "price"=> 'required|max:40',
-//            "image"=> 'required|max:40',
-//
-//
-//        ]);
-        dump('toto');
+
+
+         $validated = $request->validate([
+            "model" => 'bail|required|string|max:40',
+            "brand"=> 'bail|required|string|max:40',
+            "engine"=> 'bail|required|string|max:40',
+            "fuels"=> 'bail|required|string|max:40',
+            "km"=> 'bail|required|string|max:40',
+            "price"=> 'bail|required|string|max:40',
+            "image"=> 'bail|required|string|',
+        ]);
+
+        Article::create([
+            "model" => $request->model,
+            "brand"=> $request->brand,
+            "engine"=> $request->engine,
+            "fuels"=> $request->fuels,
+            "km"=> $request->km,
+            "price"=> $request->price,
+            "image"=> $request->image,
+
+        ]);
+       return redirect(route('articles.index'));
     }
 
     /**

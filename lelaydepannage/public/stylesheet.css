@@ -118,6 +118,10 @@ nav ul li{
     position: relative;
     top: 200px;
 }
+.album{
+    position: relative;
+    top: 250px;
+}
 /****-----------Footer -------------*************/
 .footer{
     position: relative;

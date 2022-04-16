@@ -1,5 +1,5 @@
 @extends('layouts/template')
-@section('title','Accueil - LLD')
+@section('title','Vehicules - LLD')
 @section('content')
 
 
@@ -24,7 +24,9 @@
                     </div>
                     <div class="modal-body row">
                         <form id="form" action="{{ route('articles.store') }}" method="post">
+                            @method('post')
                             @csrf
+
                             <div class="d-flex flex-column" id="divbrandInput">
                                 <label>Marque</label>
                                 <input id="brandInput" type="text" name="brand" placeholder="Peugeot">
@@ -37,9 +39,9 @@
                                 <label>Motorisation</label>
                                 <input id="engineInput" type="text" name="engine" placeholder="1.9 tdi">
                             </div>
-                            <div class="d-flex flex-column" id="divfuelInput">
+                            <div class="d-flex flex-column" id="divfuelsInput">
                                 <label>Carburant</label>
-                                <input id="fuelInput" type="text" name="fuel" placeholder="diesel">
+                                <input id="fuelsInput" type="text" name="fuels" placeholder="diesel">
                             </div>
                             <div class="d-flex flex-column" id="divkmInput">
                                 <label>KM au compteur</label>
@@ -57,16 +59,41 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                        <button id="validatedAddVehicule" onclick="submitForm()" type="submit" class="btn btn-primary">Ajouter</button>
+                        <button id="validatedAddVehicule" onclick="submitForm()" type="submit" class="btn btn-primary">
+                            Ajouter
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+    <!---- Display articles ----->
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
 
+                @foreach($vehicules as $vehicule)
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top" src="{{$vehicule->image}}">
+                            <div class="card-body">
+                                <ul>
+                                    <li>{{ $vehicule->brand }} {{ $vehicule->model }}</li>
+                                    <li>{{ $vehicule->engine }}</li>
+                                    <li>{{ $vehicule->fuels }}</li>
+                                    <li>{{ $vehicule->km }}</li>
+                                    <li>{{ $vehicule->price }} €</li>
 
+                                </ul>
 
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
 
+            </div>
+        </div>
+    </div>
 
 @endsection
