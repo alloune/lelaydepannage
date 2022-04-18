@@ -24,7 +24,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //
+        return view('rendez_vous');
     }
 
     /**
@@ -35,6 +35,7 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request);
 
         $this->validate($request,[
             'firstName'=>'required|string|max:40',

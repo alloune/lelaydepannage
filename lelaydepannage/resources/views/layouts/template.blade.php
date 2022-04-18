@@ -39,14 +39,10 @@
 
     <div class="col d-flex justify-content-center ">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link text-dark" href="{{ route('rdv') }}">Prise de rendez-vous</a>
-            </li>
+
             <li class="nav-item">
-                <a class="nav-link text-warning" href="{{ route('contact') }}">Contact</a>
+                <a class="nav-link text-dark" href="{{ route('messages.create') }}">Contact</a>
             </li>
-
-
         </ul>
     </div>
 </nav>
