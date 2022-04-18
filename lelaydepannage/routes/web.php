@@ -24,5 +24,7 @@ Route::resource('messages', MessageController::class);
 Route::resource('articles', ArticleController::class);
 
 Route::get('/dashboard', function () {return view('dashboard');})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard/messages', [MessageController::class, "index"])->middleware(['auth'])->name('dashboard-messages');
+Route::get('/dashboard/vehicules', [ArticleController::class,'indexDashboard'])->middleware(['auth'])->name('dashboard-articles');
 
 require __DIR__.'/auth.php';

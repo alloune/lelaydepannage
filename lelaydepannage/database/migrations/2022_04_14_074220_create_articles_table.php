@@ -22,6 +22,7 @@ return new class extends Migration
             $table->integer('km');
             $table->integer('price');
             $table->string('image');
+            $table->string('year');
             $table->timestamps();
         });
     }

@@ -14,7 +14,8 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::all();
+        return view('dashboardMessages', compact('messages'));
     }
 
     /**
@@ -97,6 +98,7 @@ class MessageController extends Controller
      */
     public function destroy(Message $message)
     {
-        //
+        $message->delete();
+        return redirect(route('dashboard-messages'));
     }
 }
