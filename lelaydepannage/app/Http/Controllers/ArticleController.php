@@ -163,6 +163,7 @@ class ArticleController extends Controller
     {
 
         Storage::delete($article->image);
+
         die;
         $article->delete();
 
