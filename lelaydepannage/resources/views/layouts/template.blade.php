@@ -18,14 +18,19 @@
 </head>
 <body class="bg-light">
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="d-block d-sm-none nav-link text-warning" href="{{ route('index') }}">Le Lay Depannage</a>
-    <a class="col col-2 d-none d-md-block" href="{{ route('index') }}"><img class="nav-link col-12" src="{{ asset('logo.png') }}"></a>
-    <button type="button" class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <a class="d-block d-md-none nav-link text-warning" href="{{ route('index') }}">Le Lay Depannage</a>
+    <a class="col col-2 d-none d-md-block" href="{{ route('index') }}"><img class="nav-link col-12"
+                                                                            src="{{ asset('logo.png') }}"></a>
+    <button type="button" class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#nav"><span
+            class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link text-uppercase " href="{{ route('services') }}">Mes services</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase" href="{{ route('articles.index') }}">Véhicules</a></li>
-            <li class="nav-item"><a class="nav-link text-uppercase" href="{{ route('messages.create') }}">Contact</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase " href="{{ route('services') }}">Mes services</a>
+            </li>
+            <li class="nav-item"><a class="nav-link text-uppercase" href="{{ route('articles.index') }}">Véhicules</a>
+            </li>
+            <li class="nav-item"><a class="nav-link text-uppercase" href="{{ route('messages.create') }}">Contact</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -44,11 +49,13 @@
 @yield('content')
 
 <footer class="footer container-fluid ">
-    <div class="col justify-content-center row">
-        <div class="col-2 justify-content-around row">
-            <img class="col-3 mx-auto" src="{{ asset('facebook.png') }}">
-            <img class="col-3 mx-auto" src="{{ asset('instagram.png') }}">
-            <img class="col-3 mx-auto" src="{{ asset('outlook.png') }}">
+    <div class="col  row">
+        <div class="d-none d-lg-inline row">
+            <div class="row justify-content-center">
+                <a class="col-2"><img class="col-2  mx-auto" src="{{ asset('facebook.png') }}"></a>
+                <a class="col-2"><img  class="col-2 mx-auto" src="{{ asset('instagram.png') }}"></a>
+                <a class="col-2"><img class="col-2 mx-auto" src="{{ asset('outlook.png') }}"></a>
+            </div>
         </div>
 
     </div>

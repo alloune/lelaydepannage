@@ -1,9 +1,9 @@
 @extends('layouts/template')
 @section('title','Accueil - LLD')
 @section('content')
-    <div class='start container '>
-        <div class="row">
-            <div class="col align-self-center collapse-lg ">
+    <div class='start container'>
+        <div class="row row-cols-1 row-cols-xl-2">
+            <div class="col align-self-center ">
                 <img class="col-12 sm-1 d-none d-xl-block " src="{{ asset('depannage_vieille_peugeot.jpg') }}">
             </div>
             <div class="col">

@@ -12,10 +12,10 @@
         </div>
     @endif
     <div class="message container d-flex ">
-        <div class="col col-6 bg-warning">
+        <div class="col col-6 d-none d-lg-block bg-warning">
             <img class="messageImg" src="{{ asset('send-message.png') }}">
         </div>
-        <div class="col col-6 p-4">
+        <div class="col col-lg-6 col-sm-12 p-4">
             <div>
                 <form method="post" action="{{ route('messages.store') }}">
                     @method('post')
