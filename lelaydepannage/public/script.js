@@ -42,6 +42,10 @@ function submitForm(){
         {
             'id': 'photo',
             'phrase': 'Le lien de la photo n\'est pas renseignée'
+        },
+        {
+            'id': 'year',
+            'phrase': 'L\'année n\'est pas renseignée'
         }
     ]
 
@@ -53,6 +57,7 @@ function submitForm(){
     articleToAdd.km = $("#kmInput").val()
     articleToAdd.price = $("#priceInput").val()
     articleToAdd.photo = $("#photoInput").val()
+    articleToAdd.year = $("#yearInput").val()
 
     console.log(articleToAdd)
     console.log(validateClientInput)

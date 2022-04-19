@@ -97,16 +97,16 @@
             @foreach($vehicules as $vehicule)
 
                 <tr>
+                    <form method="post" action="{{ route('articles.update', ['article'=>$vehicule->id]) }}">
                     <th scope="col"><input type="text" name="brand" value="{{ $vehicule->brand }}"></th>
                     <th scope="col"><input type="text" name="model" value="{{ $vehicule->model }}"></th>
-                    <th scope="col"><input type="text" name="engin" value="{{ $vehicule->engine }}"></th>
+                    <th scope="col"><input type="text" name="engine" value="{{ $vehicule->engine }}"></th>
                     <th scope="col"><input type="text" name="fuels" value="{{ $vehicule->fuels }}"></th>
                     <th scope="col"><input type="text" name="km" value="{{ $vehicule->km }}"></th>
                     <th scope="col"><input type="text" name="price" value="{{ $vehicule->price }}"></th>
                     <th scope="col"><input type="text" name="image" value="{{ $vehicule->image }}"></th>
                     <th scope="col"><input type="text" name="year" value="{{ $vehicule->year }}"></th>
                     <th scope="col">
-                    <form method="post" action="{{ route('articles.update', ['article'=>$vehicule->id]) }}">
                         @csrf
                         @method('PUT')
                         <input class="btn btn-primary" type="submit" value="MàJ">

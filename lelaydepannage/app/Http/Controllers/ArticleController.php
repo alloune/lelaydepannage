@@ -101,7 +101,7 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-//        dd($article);
+//        dd($request);
         $validated = $request->validate([
             "model" => 'bail|required|string|max:40',
             "brand"=> 'bail|required|string|max:40',
@@ -123,7 +123,7 @@ class ArticleController extends Controller
                 "image"=> $request->input('image'),
                 "year"=> $request->input('year'),
             ]);
-        return redirect(route('dashboardArticles'));
+        return redirect(route('dashboard-articles'));
     }
 
     /**

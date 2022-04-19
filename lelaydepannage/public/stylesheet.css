@@ -1,47 +1,18 @@
 /****-----------NAVBAR -------------*************/
 
-nav img{
-    width: 50%;
-}
-nav ul li{
-    font-size: 23px;
 
-}
-
-#navbarNav{
-    gap: 70%;
-}
-.cellNum{
-    position: relative;
-    top: 150px;
-
-}
 .cellNum img{
     width: 60px;
 
 }
 /****-----------Body -------------*************/
 
-
 /*div{*/
 /*    border: 2px solid black;*/
 /*}*/
-.start{
-    position: relative;
-    top: 150px;
-}
 
 
 
-.services, .message{
-    position: relative;
-    top: 200px;
-}
-
-.album{
-    position: relative;
-    top: 250px;
-}
 .messageImg{
     transform: rotate(-30deg);
     width: 40%;
@@ -54,7 +25,7 @@ nav ul li{
 /****-----------Footer -------------*************/
 .footer{
     position: relative;
-    bottom: -250px;
+    bottom: -200px;
     height: 60px;
     line-height: 60px;
 
