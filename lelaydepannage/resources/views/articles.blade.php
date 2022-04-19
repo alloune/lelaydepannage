@@ -13,7 +13,7 @@
 
                         <div class="col-md-4">
                             <div class="card mb-4">
-                                <img class="card-img-top" src="{{$vehicule->image}}">
+                                <img class="card-img-top" src="{{asset('/storage/'.$vehicule->image)}}">
                                 <div class="card-body">
 
                                     <ul>

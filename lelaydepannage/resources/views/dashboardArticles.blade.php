@@ -29,7 +29,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body row">
-                        <form id="form" action="{{ route('articles.store') }}" method="post">
+                        <form id="form" action="{{ route('articles.store') }}" method="post" enctype="multipart/form-data">
                             @method('post')
                             @csrf
 
@@ -59,7 +59,7 @@
                             </div>
                             <div class="d-flex flex-column" id="divphotoInput">
                                 <label>Photo</label>
-                                <input id="photoInput" type="text" name="image" placeholder="https://google.fr">
+                                <input id="photoInput" type="file" name="image">
                             </div>
                             <div class="d-flex flex-column" id="divyearInput">
                                 <label>Année de construction</label>
@@ -79,7 +79,7 @@
 
     </div>
     <div class="container-fluid">
-        <table class="table table-sm">
+        <table class="table table-sm w-70">
             <thead>
             <tr>
                 <th scope="col">Marque</th>
@@ -97,27 +97,25 @@
             @foreach($vehicules as $vehicule)
 
                 <tr>
-                    <form method="post" action="{{ route('articles.update', ['article'=>$vehicule->id]) }}">
-                    <th scope="col"><input type="text" name="brand" value="{{ $vehicule->brand }}"></th>
-                    <th scope="col"><input type="text" name="model" value="{{ $vehicule->model }}"></th>
-                    <th scope="col"><input type="text" name="engine" value="{{ $vehicule->engine }}"></th>
-                    <th scope="col"><input type="text" name="fuels" value="{{ $vehicule->fuels }}"></th>
-                    <th scope="col"><input type="text" name="km" value="{{ $vehicule->km }}"></th>
-                    <th scope="col"><input type="text" name="price" value="{{ $vehicule->price }}"></th>
-                    <th scope="col"><input type="text" name="image" value="{{ $vehicule->image }}"></th>
-                    <th scope="col"><input type="text" name="year" value="{{ $vehicule->year }}"></th>
-                    <th scope="col">
-                        @csrf
-                        @method('PUT')
-                        <input class="btn btn-primary" type="submit" value="MàJ">
-                    </form>
-                    </th>
-                    <th scope="col">
-                        <form method="post" action="{{ route('articles.destroy', ['article'=>$vehicule->id]) }}">
+                    <form method="post" action="{{ route('articles.update', ['article'=>$vehicule->id]) }}" enctype="multipart/form-data">
+                        <th scope="col"><input type="text" name="brand" value="{{ $vehicule->brand }}"></th>
+                        <th scope="col"><input type="text" name="model" value="{{ $vehicule->model }}"></th>
+                        <th scope="col"><input type="text" name="engine" value="{{ $vehicule->engine }}"></th>
+                        <th scope="col"><input type="text" name="fuels" value="{{ $vehicule->fuels }}"></th>
+                        <th scope="col"><input type="text" name="km" value="{{ $vehicule->km }}"></th>
+                        <th scope="col"><input type="text" name="price" value="{{ $vehicule->price }}"></th>
+                        <th scope="col-1"><input type="file" name="image"></th>
+                        <th scope="col"><input type="text" name="year" value="{{ $vehicule->year }}"></th>
+                        <th scope="col">
                             @csrf
-                            @method('DELETE')
-                            <input class="btn btn-danger" type="submit" value="Effacer">
-                        </form>
+                            @method('PUT')
+                            <input class="btn btn-primary" type="submit" value="MàJ">
+                    </form>
+                    <form method="post" action="{{ route('articles.destroy', ['article'=>$vehicule->id]) }}">
+                        @csrf
+                        @method('DELETE')
+                        <input class="btn btn-danger" type="submit" value="Effacer">
+                    </form>
                     </th>
                 </tr>
             @endforeach

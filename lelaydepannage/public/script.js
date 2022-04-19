@@ -41,7 +41,7 @@ function submitForm(){
         },
         {
             'id': 'photo',
-            'phrase': 'Le lien de la photo n\'est pas renseignée'
+            'phrase': 'Aucune photo ajoutée'
         },
         {
             'id': 'year',
