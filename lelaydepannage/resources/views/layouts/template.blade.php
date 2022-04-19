@@ -18,7 +18,8 @@
 </head>
 <body class="bg-light">
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="col col-2" href="{{ route('index') }}"><img class="nav-link col-12" src="{{ asset('logo.png') }}"></a>
+    <a class="d-block d-sm-none nav-link text-warning" href="{{ route('index') }}">Le Lay Depannage</a>
+    <a class="col col-2 d-none d-md-block" href="{{ route('index') }}"><img class="nav-link col-12" src="{{ asset('logo.png') }}"></a>
     <button type="button" class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav">
@@ -31,7 +32,7 @@
 <div class="cellNum container-fluid col-7 d-flex justify-content-end">
     <div class="col col-3 d-flex row justify-content-end">
         <div class="col align-self-center col-3">
-            <img class="img-fluid" src="{{ asset('smartphone.png') }}">
+            <img class="img-fluid d-none d-xl-block" src="{{ asset('smartphone.png') }}">
         </div>
         <div class="col col-8">
             <p style="font-weight:bold;">Contactez moi !</p>

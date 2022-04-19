@@ -4,7 +4,7 @@
     <div class='start container '>
         <div class="row">
             <div class="col align-self-center collapse-lg ">
-                <img class="col-12 sm-1 " src="{{ asset('depannage_vieille_peugeot.jpg') }}">
+                <img class="col-12 sm-1 d-none d-xl-block " src="{{ asset('depannage_vieille_peugeot.jpg') }}">
             </div>
             <div class="col">
                 <h2>Épaviste, Débarras de ferraille</h2>
