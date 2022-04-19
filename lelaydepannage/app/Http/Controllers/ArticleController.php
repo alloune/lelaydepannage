@@ -163,10 +163,7 @@ class ArticleController extends Controller
     {
 
         Storage::delete($article->image);
-
-        die;
         $article->delete();
-
         return redirect(route('dashboard-articles'));
     }
 }
