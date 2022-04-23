@@ -9,7 +9,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLRGY1F6RD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-MLRGY1F6RD');
@@ -45,14 +49,15 @@
 </nav>
 <div class="cellNum container-fluid col-7 d-flex justify-content-end">
     <div class="col col-3 d-flex row justify-content-end">
-        <div class="col align-self-center col-3">
-            <img class="img-fluid d-none d-xl-block" src="{{ asset('smartphone.png') }}">
-        </div>
-        <div class="col col-8">
-            <p style="font-weight:bold;">Contactez moi !</p>
-            <p style="color:#FF9000;font-weight:bold;">07-88-59-69-66</p>
-        </div>
-
+        <a href="tel:+33788596966" style="color:black; text-decoration: none">
+            <div class="col align-self-center col-3">
+                <img class="img-fluid d-none d-xl-block" src="{{ asset('smartphone.png') }}">
+            </div>
+            <div class="col col-8">
+                <p style="font-weight:bold;">Contactez moi !</p>
+                <p style="color:#FF9000;font-weight:bold;">07-88-59-69-66</p>
+            </div>
+        </a>
     </div>
 </div>
 @yield('content')
@@ -62,7 +67,7 @@
         <div class="d-none d-lg-inline row">
             <div class="row justify-content-center">
                 <a class="col-2"><img class="col-2  mx-auto" src="{{ asset('facebook.png') }}"></a>
-                <a class="col-2"><img  class="col-2 mx-auto" src="{{ asset('instagram.png') }}"></a>
+                <a class="col-2"><img class="col-2 mx-auto" src="{{ asset('instagram.png') }}"></a>
                 <a class="col-2"><img class="col-2 mx-auto" src="{{ asset('outlook.png') }}"></a>
             </div>
         </div>
