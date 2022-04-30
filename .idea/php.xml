@@ -112,9 +112,12 @@
       <path value="$PROJECT_DIR$/lelaydepannage/vendor/composer" />
       <path value="$PROJECT_DIR$/lelaydepannage/vendor/nunomaduro/collision" />
       <path value="$PROJECT_DIR$/lelaydepannage/vendor/laravel/breeze" />
+      <path value="$PROJECT_DIR$/lelaydepannage/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/lelaydepannage/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/lelaydepannage/vendor/maximebf/debugbar" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
   <component name="PhpUnit">
     <phpunit_settings>
       <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/lelaydepannage/vendor/autoload.php" />
