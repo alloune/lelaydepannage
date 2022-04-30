@@ -1,6 +1,6 @@
 @extends('layouts/template')
 @section('title','Contact - LLD')
-@section('contact')
+@section('content')
 
     <div id="contact">
         <div class="contactForm">

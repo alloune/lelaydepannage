@@ -30,45 +30,46 @@
 
 </head>
 <body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <a class="d-block d-md-none nav-link text-warning" href="{{ route('index') }}">Le Lay Depannage</a>
-    <a class="col col-2 d-none d-md-block" href="{{ route('index') }}"><img class="nav-link col-12"
-                                                                            src="{{ asset('logo.png') }}"></a>
-    <button type="button" class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#nav"><span
-            class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link text-uppercase " href="{{ route('services') }}">Mes services</a>
-            </li>
-            <li class="nav-item"><a class="nav-link text-uppercase" href="{{ route('articles.index') }}">Véhicules</a>
-            </li>
-            <li class="nav-item"><a class="nav-link text-uppercase" href="{{ route('messages.create') }}">Contact</a>
-            </li>
-        </ul>
+<div id="mySidenav" class="sidenav">
+    <a id="closeBtn" href="#" class="close">×</a>
+    <ul>
+        <li><a href="{{ route('index') }}">Accueil</a></li>
+        <li><a href="{{ route('services') }}">Nos services</a></li>
+        <li><a href="{{ route('articles.index') }}">Nos véhicules</a></li>
+        <li><a href="{{ route('contact') }}">Contact</a></li>
+    </ul>
+</div>
+<div class="navBar">
+    <a href="#" id="openBtn">
+          <span class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+    </a>
+    <div class="imagePlace">
+        <img src="{{ asset('logo.png') }}">
     </div>
-</nav>
-<div class="cellNum container-fluid col-7 d-flex justify-content-end">
-    <div class="col col-3 d-flex row justify-content-end">
+</div>
+<div class="cellPhone">
         <a href="tel:+33788596966" style="color:black; text-decoration: none">
-            <div class="col align-self-center col-3">
-                <img class="img-fluid d-none d-xl-block" src="{{ asset('smartphone.png') }}">
+            <div class="celimg">
+                <img  src="{{ asset('smartphone.png') }}">
             </div>
-            <div class="col col-8">
-                <p style="font-weight:bold;">Contactez moi !</p>
+            <div class="celText">
+                <p style="font-weight:bold; font-size: 3vw">Contactez-moi !</p>
                 <p style="color:#FF9000;font-weight:bold;">07-88-59-69-66</p>
             </div>
         </a>
-    </div>
 </div>
 @yield('content')
 
 <footer class="footer container-fluid ">
-    <div class="col  row">
-        <div class="d-none d-lg-inline row">
-            <div class="row justify-content-center">
-                <a class="col-2"><img class="col-2  mx-auto" src="{{ asset('facebook.png') }}"></a>
-                <a class="col-2"><img class="col-2 mx-auto" src="{{ asset('instagram.png') }}"></a>
-                <a class="col-2"><img class="col-2 mx-auto" src="{{ asset('outlook.png') }}"></a>
+    <div class="col row">
+        <div class="d-none d-lg-inline row justify-content-center">
+            <div class="col-6 row">
+                <a class="col"><img src="{{ asset('facebook.png') }}"></a>
+                <a class="col"><img style="width: 64px" src="{{ asset('outlook.png') }}"></a>
             </div>
         </div>
 

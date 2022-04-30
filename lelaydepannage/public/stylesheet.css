@@ -1,33 +1,89 @@
-/****-----------NAVBAR -------------*************/
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+}
 
+/* Sidenav menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
 
-.cellNum img{
-    width: 60px;
+.sidenav a:hover {
+    color: #111;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+    left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+    position: relative;
+    left: 5px;
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+.navBar{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.navBar img, .cellPhone img{
+    max-width:100%;
+    max-height:100%;
+
 
 }
-/****-----------Body -------------*************/
+.imagePlace{
 
-/*div{*/
-/*    border: 2px solid black;*/
-/*}*/
-
-
-
-.messageImg{
-    transform: rotate(-30deg);
     width: 40%;
-    position: relative;
-    left: 150px;
-    top: 100px;
-
 }
 
-/****-----------Footer -------------*************/
-.footer{
-    position: relative;
-    bottom: -200px;
-    height: 60px;
-    line-height: 60px;
+.celimg{
+    width: 15%;
+}
 
+.cellPhone{
+    position: relative;
+    top:10px
+}
+.cellPhone a{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: inherit;
+    right: 10px;
+    gap: 20px;
 }
 
