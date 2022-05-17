@@ -1,128 +1,169 @@
-.sidenav {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 3;
-    top: 0;
-    left: -250px;
-    background-color: #e8e8e8;
-    padding-top: 60px;
-    transition: left 0.5s ease;
+@media screen and (max-width: 576px) {
+    #wideScreenNav {
+        display: none;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: -250px;
+        background-color: #e8e8e8;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    /* Sidenav menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #111;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Active class */
+    .sidenav.active {
+        left: 0;
+    }
+
+    /* Close btn */
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    /* Icône burger */
+    .burger-icon span {
+        position: relative;
+        left: 5px;
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+    }
+
+    .navBar {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navBar img, .cellPhone img, .indexBody img, .services img {
+        max-width: 100%;
+        max-height: 100%;
+
+
+    }
+
+    .imagePlace {
+
+        width: 40%;
+    }
+
+    .celimg {
+        width: 15%;
+    }
+
+    .cellPhone {
+        position: relative;
+        top: 10px
+    }
+
+    .cellPhone a {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: inherit;
+        right: 10px;
+        gap: 20px;
+    }
+
+    .indexCard {
+        position: relative;
+        z-index: 2;
+        top: -40px;
+        left: 10%;
+        display: flex;
+        gap: 3%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 45%;
+
+    }
+
+    .card {
+        flex-basis: 44%;
+        text-align: center;
+    }
+
+    .card h1 {
+        font-size: 14px;
+        color: #FF9000;
+        font-weight: bold;
+    }
+
+    .secondBlock {
+        background-color: #FF9000;
+        border-radius: 25px 25px 0 0;
+        position: relative;
+        top: -50px;
+        padding: 30px 10px 10px 30px;
+    }
+
+    .secondBlock h2 {
+        text-align: center;
+    }
+
+    .thirdBlock {
+        position: relative;
+
+    }
+
+    .contact, .formContact {
+        border: 2px solid black;
+    }
 }
 
-/* Sidenav menu links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
+@media screen and (min-width: 576px) {
+    .sidenav {
+        display: none;
+    }
 
-.sidenav a:hover {
-    color: #111;
-}
+    .navBar {
+        display: none;
+    }
 
-.sidenav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+    #wideScreenNav {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: white;
 
-/* Active class */
-.sidenav.active {
-    left: 0;
-}
+    }
 
-/* Close btn */
-.sidenav .close {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-}
-
-/* Icône burger */
-.burger-icon span {
-    position: relative;
-    left: 5px;
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-}
-.navBar{
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.navBar img, .cellPhone img, .indexBody img, .services img{
-    max-width:100%;
-    max-height:100%;
-
-
-}
-.imagePlace{
-
-    width: 40%;
-}
-
-.celimg{
-    width: 15%;
-}
-
-.cellPhone{
-    position: relative;
-    top:10px
-}
-.cellPhone a{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    position: inherit;
-    right: 10px;
-    gap: 20px;
-}
-
-.indexCard{
-    position: relative;
-    z-index: 2;
-    top: -40px;
-    left: 10%;
-    display: flex;
-    gap: 3%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 45% ;
-
-}
-
-.card{
-    flex-basis: 44%;
-    text-align: center;
-}
-.card h1{
-    font-size: 14px;
-    color: #FF9000;
-    font-weight: bold;
-}
-.secondBlock{
-    background-color: #FF9000;
-    border-radius: 25px 25px 0 0;
-    position: relative;
-    top: -50px;
-    padding: 30px 10px 10px 30px;
-}
-.secondBlock h2{
-    text-align: center;
-}
-.thirdBlock{
-    position: relative;
-
-}
-.contact, .formContact{
-    border:2px solid black;
+    #wideScreenNav img {
+        width: 50%;
+    }
+    #wideScreenNav .link{
+        width: 50%;
+        text-align: right;
+    }
 }

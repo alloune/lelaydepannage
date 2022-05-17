@@ -16,7 +16,6 @@ use App\Http\Controllers\ArticleController;
 */
 
 Route::get('/', function () {return view('index');})->name('index');
-Route::get('/services', function () {return view('services');})->name('services');
 Route::get('/contact', function () {return view('contact');})->name('contact');
 
 Route::resource('messages', MessageController::class);

@@ -34,7 +34,6 @@
     <a id="closeBtn" href="#" class="close">×</a>
     <ul>
         <li><a href="{{ route('index') }}">Accueil</a></li>
-        <li><a href="{{ route('services') }}">Nos services</a></li>
         <li><a href="{{ route('articles.index') }}">Nos véhicules</a></li>
         <li><a href="{{ route('contact') }}">Contact</a></li>
     </ul>
@@ -51,16 +50,28 @@
         <img src="{{ asset('logo.png') }}">
     </div>
 </div>
+<div id="wideScreenNav">
+    <div class="imagePlace">
+        <img src="{{ asset('logo.png') }}">
+    </div>
+    <div class="link">
+        <a href="{{ route("index") }}">Accueil</a>
+        <a href="{{ route("articles.index") }}">Mes véhicules</a>
+        <a href="{{ route("contact") }}">Contact</a>
+    </div>
+
+
+</div>
 <div class="cellPhone">
-        <a href="tel:+33788596966" style="color:black; text-decoration: none">
-            <div class="celimg">
-                <img  src="{{ asset('smartphone.png') }}">
-            </div>
-            <div class="celText">
-                <p style="font-weight:bold; font-size: 3vw">Contactez-moi !</p>
-                <p style="color:#FF9000;font-weight:bold;">07-88-59-69-66</p>
-            </div>
-        </a>
+    <a href="tel:+33788596966" style="color:black; text-decoration: none">
+        <div class="celimg">
+            <img src="{{ asset('smartphone.png') }}">
+        </div>
+        <div class="celText">
+            <p style="font-weight:bold; font-size: 3vw">Contactez-moi !</p>
+            <p style="color:#FF9000;font-weight:bold;">07-88-59-69-66</p>
+        </div>
+    </a>
 </div>
 @yield('content')
 
