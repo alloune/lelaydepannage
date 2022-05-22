@@ -152,18 +152,36 @@
     }
 
     #wideScreenNav {
+        overflow: hidden;
+    }
+
+    #wideScreenNav .link {
+        float: right;
+        padding: 14px 16px;
+    }
+    .link a{
+        padding: 14px 16px;
+        font-size: 28px;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+    }
+    .link a:hover{
+        color:#FF9000 ;
+    }
+    #wideScreenNav .imagePlace {
+        float: left;
+    }
+    .imagePlace img{
+        width: 30%;
+    }
+    .cellPhone{
         display: flex;
         flex-direction: row;
-        width: 100%;
-        background-color: white;
-
+        justify-content: flex-end;
+    }
+    .celimg img{
+        width: 10%;
     }
 
-    #wideScreenNav img {
-        width: 50%;
-    }
-    #wideScreenNav .link{
-        width: 50%;
-        text-align: right;
-    }
 }
