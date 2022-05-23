@@ -153,6 +153,8 @@
     }
     .textFoot{
         height: 70%;
+        line-height: 10px;
+        margin-top: 10px;
     }
     .sentenceAcc{
         display: flex;
