@@ -176,12 +176,18 @@
         font-weight: bold;
     }
     .services{
-        margin-top: 30px;
-        margin-bottom:30px ;
-        background-color: #FF9000;
-        text-align: center;
-        height: 90%;
 
+        background-color: #FF9000;
+        height: 15px;
+        margin-bottom: 30px;
+
+    }
+    .nosServices{
+        text-align: center;
+        position: relative;
+        bottom: -18px;
+        font-weight: bold;
+        font-size: 24px;
     }
     .listOfServices{
         display: flex;

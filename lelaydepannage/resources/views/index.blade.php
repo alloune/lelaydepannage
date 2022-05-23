@@ -5,8 +5,8 @@
         <img src="{{ asset('car1Carou.svg') }}">
         <h4>Besoin d'un ferrailleur ?<br/> Nous vous proposons des services spécifiques à vos besoins !</h4>
     </div>
+    <h4 class="nosServices">Nos Services</h4>
     <div class="services">
-        <h4>Nos Services</h4>
     </div>
     <div class="listOfServices">
         <div class="icon">
