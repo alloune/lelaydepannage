@@ -64,7 +64,10 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        padding:10px;
+
     }
+
 
     .navBar img, .cellPhone img, .indexBody img {
         max-width: 100%;
@@ -161,6 +164,10 @@
         align-items: center;
         justify-content: center;
 
+
+    }
+    .sentenceAcc img{
+        max-width: 100%;
     }
     .sentenceAcc h4{
         position: absolute;
