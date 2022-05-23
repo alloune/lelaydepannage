@@ -39,6 +39,9 @@
     </ul>
 </div>
 <div class="navBar">
+    <div class="imagePlace">
+        <img src="{{ asset('logo.png') }}">
+    </div>
     <a href="#" id="openBtn">
           <span class="burger-icon">
             <span></span>
@@ -46,9 +49,6 @@
             <span></span>
           </span>
     </a>
-    <div class="imagePlace">
-        <img src="{{ asset('logo.png') }}">
-    </div>
 </div>
 <div id="wideScreenNav">
     <div class="imagePlace">
@@ -63,31 +63,26 @@
 
 </div>
 <div class="cellPhone">
-    <a href="tel:+33788596966" style="color:black; text-decoration: none">
-        <div class="celimg">
-            <img src="{{ asset('smartphone.png') }}">
+    <img src="{{ asset('7sur7.svg') }}">
+    <div>
+        <h2>Contactez-moi</h2>
+        <div class="cellNumber">
+            <img src="{{ asset('cellPhone.svg') }}">
+            <h3>07 88 59 69 66</h3>
         </div>
-        <div class="celText">
-            <p style="font-weight:bold; font-size: 3vw">Contactez-moi !</p>
-            <p style="color:#FF9000;font-weight:bold;">07-88-59-69-66</p>
-        </div>
-    </a>
+    </div>
 </div>
 @yield('content')
 
-<footer class="footer container-fluid ">
-    <div class="col row">
-        <div class="d-none d-lg-inline row justify-content-center">
-            <div class="col-6 row">
-                <a class="col"><img src="{{ asset('facebook.png') }}"></a>
-                <a class="col"><img style="width: 64px" src="{{ asset('outlook.png') }}"></a>
-            </div>
+    <footer>
+        <img src="{{ asset('FacebookFav.svg') }}">
+        <div class="textFoot">
+            <p>Mentions légales</p>
+            <p>LeLayDepannage©</p>
+            <p>Copyright 2022</p>
+            <p>Le Lay Dev. Web</p>
         </div>
-
-    </div>
-    <div class="col justify-content-center ">
-        <p class="text-center"> Le Lay Dev.Web Copyright 2022</p>
-    </div>
+    </footer>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
