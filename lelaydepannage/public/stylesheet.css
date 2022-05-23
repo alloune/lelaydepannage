@@ -66,7 +66,7 @@
         justify-content: space-between;
     }
 
-    .navBar img, .cellPhone img, .indexBody img, .services img {
+    .navBar img, .cellPhone img, .indexBody img {
         max-width: 100%;
         max-height: 100%;
 
@@ -154,6 +154,43 @@
     .textFoot{
         height: 70%;
     }
+    .sentenceAcc{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .sentenceAcc h4{
+        position: absolute;
+        width: 72%;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .services{
+        margin-top: 30px;
+        margin-bottom:30px ;
+        background-color: #FF9000;
+        text-align: center;
+        height: 90%;
+
+    }
+    .listOfServices{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .services h4{
+        position: relative;
+        top:-23px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .icon{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width: 576px) {
@@ -183,7 +220,7 @@
         margin-right: 20px;
     }
 
-    .navBar img, .cellPhone img, .indexBody img, .services img {
+    .navBar img, .cellPhone img, .indexBody img {
         max-width: 100%;
         max-height: 100%;
     }
