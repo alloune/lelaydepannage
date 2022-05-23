@@ -64,25 +64,27 @@
 </div>
 <div class="cellPhone">
     <img src="{{ asset('7sur7.svg') }}">
-    <div>
-        <h2>Contactez-moi</h2>
-        <div class="cellNumber">
-            <img src="{{ asset('cellPhone.svg') }}">
-            <h3>07 88 59 69 66</h3>
-        </div>
+    <div class="callMe">
+        <a href="tel:0788596966">
+            <h2>Contactez-moi</h2>
+            <div class="cellNumber">
+                <img src="{{ asset('cellPhone.svg') }}">
+                <h3>07 88 59 69 66</h3>
+            </div>
+        </a>
     </div>
 </div>
 @yield('content')
 
-    <footer>
-        <img src="{{ asset('FacebookFav.svg') }}">
-        <div class="textFoot">
-            <p>Mentions légales</p>
-            <p>LeLayDepannage©</p>
-            <p>Copyright 2022</p>
-            <p>Le Lay Dev. Web</p>
-        </div>
-    </footer>
+<footer>
+    <img src="{{ asset('FacebookFav.svg') }}">
+    <div class="textFoot">
+        <p>Mentions légales</p>
+        <p>LeLayDepannage©</p>
+        <p>Copyright 2022</p>
+        <p>Le Lay Dev. Web</p>
+    </div>
+</footer>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
