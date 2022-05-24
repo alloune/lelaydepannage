@@ -1,5 +1,5 @@
 @media screen and (max-width: 550px) {
-    #wideScreenNav, .carouselIndex {
+    #wideScreenNav, .carouselIndex, .textDesciption {
         display: none;
     }
 
@@ -213,7 +213,7 @@
 }
 
 @media screen and (min-width: 550px) {
-    .sidenav, .sentenceAcc, .navBar, .cellPhone{
+    .sidenav, .sentenceAcc, .navBar, .cellPhone {
         display: none;
     }
 
