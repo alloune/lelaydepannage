@@ -1,5 +1,5 @@
-@media screen and (max-width: 576px) {
-    #wideScreenNav {
+@media screen and (max-width: 550px) {
+    #wideScreenNav, .carouselIndex {
         display: none;
     }
 
@@ -212,32 +212,46 @@
     }
 }
 
-@media screen and (min-width: 576px) {
-    .sidenav {
+@media screen and (min-width: 550px) {
+    .sidenav, .sentenceAcc, .navBar, .cellPhone{
         display: none;
     }
 
-    .navBar {
-        display: none;
-    }
 
+    .fullWidthMenu{
+        width: 100%;
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     #wideScreenNav {
         display: flex;
         flex-direction: row;
-        width: 100%;
+        width: 70%;
         background-color: white;
         justify-content: space-between;
+        align-items: center;
+    }
+    #wideScreenNav .link{
+       display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        font-size: 28px;
+        font-weight: bold;
+        gap: 50px;
+        margin-right:70px;
+    }
+    .link a{
+        text-decoration: none;
+        color: black;
     }
 
     #wideScreenNav img {
         width: 50%;
     }
 
-    #wideScreenNav .link {
-        width: 50%;
-        text-align: right;
-        margin-right: 20px;
-    }
+
 
     .navBar img, .cellPhone img, .indexBody img {
         max-width: 100%;
@@ -253,11 +267,68 @@
         text-align: end;
 
     }
-    .indexBody{
-        width: 70%;
-        margin:  0 auto;
-    }
 
-    #wideScreenNav .link
+    /************/
+
+    #carouselExampleIndicators{
+        width: 70%;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .orangeBlock{
+        background-color: #FF9000;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .carouselIndex{
+
+        max-width: 70%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    .services{
+        background-color: #FF9000;
+        height: 20px;
+        width: 70%;
+    }
+    .nosServices{
+        margin-left: 18%;
+        position: relative;
+        top: 18px;
+        font-weight: bold;
+        align-self: flex-start;
+
+    }
+    .listOfServices{
+        margin-top: 80px ;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 70%;
+        margin-left: 10%;
+    }
+    .listOfServices h4{
+        font-weight: bold;
+    }
+    .textDesciption{
+        width: 60%;
+        margin-top: 70px;
+        flex-wrap: nowrap;
+
+    }
+    footer{
+        width: 100%;
+        background-color: #FF9000;
+        display: flex;
+        justify-content: space-around;
+    }
 
 }
