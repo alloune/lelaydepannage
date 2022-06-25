@@ -1,62 +1,84 @@
 @extends('layouts/template')
 @section('title','Accueil - LLD')
 @section('content')
-    <div class="indexBody">
-        <img class="" src="{{ asset('depannage_vieille_peugeot.jpg') }}">
 
-        <div class="indexCard">
-            <div class="card"><h1>Gratuit</h1></div>
-            <div class="card"><h1>7/7j</h1></div>
+    <div class="sentenceAcc">
+        <img src="{{ asset('car1Carou.svg') }}">
+        <h4>Besoin d'un ferrailleur ?<br/> Nous vous proposons des services spécifiques à vos besoins !</h4>
+    </div>
 
+
+
+    <div class="carouselIndex">
+        <div class="orangeBlock">
+            <img src="{{ asset('7_7Wide.svg') }}">
         </div>
-        <div class="secondBlock">
-            <h2>Le cycle de vie d'un véhicule</h2>
-            <p>Actuellement, on estime à 38,2 millions de voitures en circulation en france. Chaque véhicules est
-                composé en moyenne de 711kg de matériaux ferreux ou en acier, ainsi que de 100 kilos de
-                fontes/alliages. Soit 810 kilos recyclable sur un poids total d'environs 1 tonne.
-                Ce qui fait des véhicules une des productions humaines les mieux recyclables, 81% au total.<br>
-                La durée de vie d'une voiture ne se compte pas forcement en année, mais plûtot en kilomètre parcouru.
-                Cette
-                durée de vie oscille entre 200 000 km et 400 000km pour les voitures les plus resistantes.
-                Pour plus de renseignement, n'hésitez pas à visiter <a
-                    href="https://blog.vivacar.fr/quelle-est-la-duree-de-vie-dune-voiture/">ce site</a></p>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
-        <div class="thirdBlock">
-            <h2>Les autres sources de métaux recyclable</h2>
-            <p>Il est également possible de récupérer des materiaux ferreux d'autre origine. On peut penser par exemple
-                au bardage
-                d'une ancienne usine, du matériel professionnel comme des équipements de cuisines, des chauffe-eaux
-                etc.</p>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('carou1.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('carou2.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('carou3.png') }}" class="d-block w-100" alt="...">
+            </div><div class="carousel-item">
+                <img src="{{ asset('carou4.png') }}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+        <div class="orangeBlock">
+            <h4>Besoin d’un ferrailleur ?
+                Nous vous proposons des services spécifiques à vos besoins !</h4>
         </div>
     </div>
+
+
+
+    <h4 class="nosServices">Nos Services</h4>
     <div class="services">
-        <div>
-            <img src="{{ asset('delivery.jpg') }}">
-            <h3 style="text-align: center">Livraison de véhicules</h3>
-            <p>Suite à l'achat d'un véhicule, il n'est pas toujours simple de le faire acheminer chez sois.</p>
-            <br/>Pour palier à cette difficulté, je met à disposition mon savoir faire et mon matériel afin de livrer
-            dans les meilleures conditions votre nouveau véhicule.
-        </div>
-        <div style="background-color: #FF9000">
-            <img src="{{ asset('pickup.jpg') }}">
-            <h3 style="text-align: center">Enlèvement d'encombrants</h3>
-            <p>Il reste souvent beaucoup de déchet, de matériel dont nous n'avons plus l'utilité après l'achat d'un
-                bien, d'un fond de commerce etc.
-                <br/>Afin de vous faciliter la tâche dans votre transition, je vous viens en aide pour débarrasser tous
-                ses élements dont vous ne voulez plus et qui prennent une place immense.
-        </div>
-        <div>
-            <img src="{{ asset('destruction.jpg') }}">
-            <h3 style="text-align: center">Destruction d'épave</h3>
-            <p>Ma société étant agréee pour la destruction d'épave, je viens chez vous récuperer le véhicule, j'établis
-                alors un CERFA de destruction que vous devrez fournir à votre assurance où pour bénéficier de la prime à
-                descrution lors de l'achat d'un nouveau véhicule.
-                <br/>Peut importe l'état du véhicule, je viendrais vous en débarasser. Seul impératif, pouvoir finir la
-                carte grise.
-        </div>
-
-
     </div>
+    <div class="listOfServices">
+        <div class="icon">
+            <h4>Dépannage | Livraison</h4>
+            <img src="{{ asset('dep.svg') }}">
+            <div class="textDesciption">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur consequuntur, ea earum eius est, eum labore laborum laudantium magni maxime molestiae, molestias natus nesciunt optio praesentium quaerat tempora voluptatum.</p>
+
+            </div>
+        </div>
+        <div>
+            <img src="{{ asset('destr.svg') }}">
+            <div class="textDesciption">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur consequuntur, ea earum eius est, eum labore laborum laudantium magni maxime molestiae, molestias natus nesciunt optio praesentium quaerat tempora voluptatum.</p>
+
+            </div>
+        </div>
+        <div class="icon">
+
+            <h4>Enlèvement d'encombrant</h4>
+            <img src="{{ asset('enc.svg') }}">
+            <div class="textDesciption">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur consequuntur, ea earum eius est, eum labore laborum laudantium magni maxime molestiae, molestias natus nesciunt optio praesentium quaerat tempora voluptatum.</p>
+            </div>
+        </div>
+    </div>
+
 
 
 @endsection
