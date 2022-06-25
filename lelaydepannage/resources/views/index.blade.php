@@ -11,7 +11,7 @@
 
     <div class="carouselIndex">
         <div class="orangeBlock">
-            <img src="{{ asset('7_7Wide.svg') }}">
+            <a href="tel:0788596966"><img src="{{ asset('7_7Wide.svg') }}"></a>
         </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

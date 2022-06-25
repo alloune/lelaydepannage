@@ -18,5 +18,6 @@ class Article extends Model
          "price",
         "image",
         "year",
+        "ct",
     ];
 }

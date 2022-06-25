@@ -38,7 +38,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -46,41 +46,43 @@ class ArticleController extends Controller
 
         $vehicules = Article::all();
 
-         $validated = $request->validate([
+        $validated = $request->validate([
             "model" => 'bail|required|string|max:40',
-            "brand"=> 'bail|required|string|max:40',
-            "engine"=> 'bail|required|string|max:40',
-            "fuels"=> 'bail|required|string|max:40',
-            "km"=> 'bail|required|string|max:40',
-            "price"=> 'bail|required|string|max:40',
-            "image"=> 'bail|image',
-             "year"=> 'bail|required|string',
+            "brand" => 'bail|required|string|max:40',
+            "engine" => 'bail|required|string|max:40',
+            "fuels" => 'bail|required|string|max:40',
+            "km" => 'bail|required|string|max:40',
+            "price" => 'bail|required|string|max:40',
+            "image" => 'bail|image|required|max:2048',
+            "year" => 'bail|required|string',
+            "ct" => 'bail|required|string',
         ]);
 
-        $file = $request->file('image');
-        $fileName = date('d-m-Y-').$file->getClientOriginalName();
-        $file-> move(public_path('storage'), $fileName);
 
+        $file = $request->file('image');
+        $fileName = date('d-m-Y-') . $file->getClientOriginalName();
+        $file->move(public_path('storage'), $fileName);
 
 
         Article::create([
             "model" => $request->model,
-            "brand"=> $request->brand,
-            "engine"=> $request->engine,
-            "fuels"=> $request->fuels,
-            "km"=> $request->km,
-            "price"=> $request->price,
-            "image"=> $fileName,
-            "year"=>$request->year,
+            "brand" => $request->brand,
+            "engine" => $request->engine,
+            "fuels" => $request->fuels,
+            "km" => $request->km,
+            "price" => $request->price,
+            "image" => $fileName,
+            "year" => $request->year,
+            "ct" => $request->ct,
 
         ]);
-       return redirect(route('dashboard-articles', compact('vehicules')));
+        return redirect(route('dashboard-articles', compact('vehicules')));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -91,7 +93,7 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -102,8 +104,8 @@ class ArticleController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Article $article)
@@ -112,20 +114,21 @@ class ArticleController extends Controller
 
         $validated = $request->validate([
             "model" => 'bail|required|string|max:40',
-            "brand"=> 'bail|required|string|max:40',
-            "engine"=> 'bail|required|string|max:40',
-            "fuels"=> 'bail|required|string|max:40',
-            "km"=> 'bail|required|string|max:40',
-            "price"=> 'bail|required|string|max:40',
-            "image"=> 'image',
-            "year"=> 'bail|required|string',
+            "brand" => 'bail|required|string|max:40',
+            "engine" => 'bail|required|string|max:40',
+            "fuels" => 'bail|required|string|max:40',
+            "km" => 'bail|required|string|max:40',
+            "price" => 'bail|required|string|max:40',
+            "image" => 'image',
+            "year" => 'bail|required|string',
+            "ct" => 'bail|required|string',
         ]);
-//         dd(gettype($request->image));
-        if(isset($request->image)) {
 
-          $file = $request->file('image');
-          $fileName = date('d-m-Y-').$file->getClientOriginalName();
-          $file-> move(public_path('storage'), $fileName);
+        if (isset($request->image)) {
+
+            $file = $request->file('image');
+            $fileName = date('d-m-Y-') . $file->getClientOriginalName();
+            $file->move(public_path('storage'), $fileName);
 
             $article->update([
                 "model" => $request->input('model'),
@@ -136,18 +139,7 @@ class ArticleController extends Controller
                 "price" => $request->input('price'),
                 "image" => $fileName,
                 "year" => $request->input('year'),
-            ]);
-        }
-        else{
-            $article->update([
-                "model" => $request->input('model'),
-                "brand" => $request->input('brand'),
-                "engine" => $request->input('engine'),
-                "fuels" => $request->input('fuels'),
-                "km" => $request->input('km'),
-                "price" => $request->input('price'),
-                "image" => $article->image,
-                "year" => $request->input('year'),
+                "ct" => $request->input('ct'),
             ]);
         }
         return redirect(route('dashboard-articles'));
@@ -156,12 +148,11 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Article $article)
     {
-
         Storage::delete($article->image);
         $article->delete();
         return redirect(route('dashboard-articles'));

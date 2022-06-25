@@ -23,6 +23,7 @@ return new class extends Migration
             $table->integer('price');
             $table->string('image');
             $table->string('year');
+            $table->string('ct');
             $table->timestamps();
         });
     }

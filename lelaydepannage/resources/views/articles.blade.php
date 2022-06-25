@@ -22,9 +22,11 @@
                                         <li>Année : {{ $vehicule->year }} </li>
                                         <li>Carburant : {{ $vehicule->fuels }}</li>
                                         <li>Kilométrage : {{ $vehicule->km }}</li>
+                                        <li>Controle téchnique : {{ $vehicule->ct }}</li>
                                         <li>Prix : {{ $vehicule->price }} €</li>
                                     </ul>
-
+                                    <button class="callForCar" ><a href="tel:0788596966">Appelez !</a></button>
+                                    <button class="callForCar" ><a href="{{ route('contact') }}">Contacte par mail</a></button>
                                 </div>
                             </div>
                         </div>

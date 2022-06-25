@@ -53,6 +53,10 @@
                                 <label>KM au compteur</label>
                                 <input id="kmInput" type="text" name="km" placeholder="350000">
                             </div>
+                            <div class="d-flex flex-column" id="divctInput">
+                                <label>Contröle technique</label>
+                                <input id="ctInput" type="text" name="ct" placeholder="oui">
+                            </div>
                             <div class="d-flex flex-column" id="divpriceInput">
                                 <label>Prix</label>
                                 <input id="priceInput" type="text" name="price" placeholder="1500">
@@ -87,6 +91,7 @@
                 <th scope="col">Motorisation</th>
                 <th scope="col">Carburant</th>
                 <th scope="col">Kilométrage</th>
+                <th scope="col">Contrôle technique</th>
                 <th scope="col">Prix</th>
                 <th scope="col">Photo</th>
                 <th scope="col">Année</th>
@@ -103,8 +108,9 @@
                         <th scope="col"><input type="text" name="engine" value="{{ $vehicule->engine }}"></th>
                         <th scope="col"><input type="text" name="fuels" value="{{ $vehicule->fuels }}"></th>
                         <th scope="col"><input type="text" name="km" value="{{ $vehicule->km }}"></th>
+                        <th scope="col"><input type="text" name="km" value="{{ $vehicule->ct }}"></th>
                         <th scope="col"><input type="text" name="price" value="{{ $vehicule->price }}"></th>
-                        <th scope="col-1"><input type="file" name="image"></th>
+                        <th scope="col-1"><input type="file" name="image" value="{{ $vehicule->image }}"></th>
                         <th scope="col"><input type="text" name="year" value="{{ $vehicule->year }}"></th>
                         <th scope="col">
                             @csrf
