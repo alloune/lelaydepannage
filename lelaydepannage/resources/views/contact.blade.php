@@ -2,49 +2,61 @@
 @section('title','Contact - LLD')
 @section('content')
 
-    <div class="contact">
-        <h3 style="text-align: center">Besoin d'un renseignement ? </h3>
 
-        <form class="formContact" method="post" action="{{ route('messages.store') }}">
-            @method('post')
-            @csrf
-            <div>
-                <label>Prénom</label>
-                <input type="text" placeholder="Votre prénom" name="firstName">
-                <label>Nom</label>
-                <input type="text" placeholder="Votre nom" name="lastName">
-                <label>E-mail</label>
-                <input type="email" placeholder="recup@gmail.com" name="email">
-                <label>Sujet de votre message</label>
-                <select name="subject">
-                    <option>Dépannage</option>
-                    <option>Enlèvement de ferraille</option>
-                    <option>Enlèvement de véhicule</option>
-                    <option>Certificat de destruction</option>
-                    <option>Autre</option>
-                </select>
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header">
+                    <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                    </div>
+                    <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                    </div>
+                </div>
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <span>Besoin d'un</span>
+                            <span>Renseignement ?</span>
+                        </div>
+                    </div>
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <div class="app-form-group">
+                                <input class="app-form-control" name="nom" placeholder="Nom">
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control" name="prenom" placeholder="Prenom">
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control" name="email" placeholder="Email">
+                            </div>
+                            <div class="app-form-group">
+                                <label class="app-form-control">Sujet</label>
+                                <select class="app-form-control">
+                                    <option>Dépannage</option>
+                                    <option>Enlèvement de ferraille</option>
+                                    <option>Enlèvement de véhicule</option>
+                                    <option>Autre</option>
+                                    <
+                                </select>
+                            </div>
+                            <div class="app-form-group message">
+                                <input class="app-form-control" placeholder="Votre message">
+                            </div>
+                            <div class="app-form-group buttons">
+                                <button class="app-form-button">Envoyer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label>Votre message</label>
-                <textarea name="coreMessage" placeholder="Écrivez votre message ici ..."></textarea>
-                <input class="submit" type="submit">
-            </div>
-        </form>
-
-
-    </div>
-    <div class="infoContact">
-        <h3>Adresse</h3>
-        <p>550 Chemin des matières</p>
-        <p>38260 Champier</p>
-        <h3>Tel</h3>
-        <p>07-88-59-69-66</p>
-        <h3>Mail</h3>
-        <p>lelay.jordan@outlook.fr</p>
-        <h3>Siret</h3>
-        <p>Tu me le fileras j'en sais rien</p>
-    </div>
+        </div>
     </div>
 
-    </div>
 @endsection
