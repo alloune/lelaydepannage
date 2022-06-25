@@ -2,7 +2,6 @@
 @section('title','Contact - LLD')
 @section('content')
 
-
     <div class="background">
         <div class="container">
             <div class="screen">
@@ -25,35 +24,39 @@
                             <span>Renseignement ?</span>
                         </div>
                     </div>
+                    <form id="form" action="{{ route('messages.store') }}" method="post" enctype="multipart/form-data">
+                        @method('post')
+                        @csrf
                     <div class="screen-body-item">
                         <div class="app-form">
                             <div class="app-form-group">
-                                <input class="app-form-control" name="nom" placeholder="Nom">
+                                <input class="app-form-control" name="firstName" placeholder="Nom">
                             </div>
                             <div class="app-form-group">
-                                <input class="app-form-control" name="prenom" placeholder="Prenom">
+                                <input class="app-form-control" name="lastName" placeholder="Prenom">
                             </div>
                             <div class="app-form-group">
                                 <input class="app-form-control" name="email" placeholder="Email">
                             </div>
                             <div class="app-form-group">
                                 <label class="app-form-control">Sujet</label>
-                                <select class="app-form-control">
-                                    <option>Dépannage</option>
-                                    <option>Enlèvement de ferraille</option>
-                                    <option>Enlèvement de véhicule</option>
+                                <select class="app-form-control" name="subject">
+                                    <option value="depannage">Dépannage</option>
+                                    <option value="ferraille">Enlèvement de ferraille</option>
+                                    <option value="enlevement de vehicule">Enlèvement de véhicule</option>
+                                    <option value="achat">Achat de véhicule</option>
                                     <option>Autre</option>
-                                    <
                                 </select>
                             </div>
                             <div class="app-form-group message">
-                                <input class="app-form-control" placeholder="Votre message">
+                                <input class="app-form-control" name="coreMessage" placeholder="Votre message">
                             </div>
                             <div class="app-form-group buttons">
                                 <button class="app-form-button">Envoyer</button>
                             </div>
                         </div>
                     </div>
+                        </form>
                 </div>
             </div>
         </div>
