@@ -150,6 +150,10 @@
         display: flex;
         justify-content:space-around;
         background-color:#FF9000 ;
+        font-size: 12px;
+    }
+    footer  img{
+        width: 50px;
     }
     .textFoot{
         height: 70%;
@@ -338,8 +342,14 @@
         background-color: #FF9000;
         display: flex;
         justify-content: space-around;
+        font-size: 12px;
     }
-
+    .textFoot{
+        margin-top: 25px;
+    }
+    footer img{
+        width: 52px;
+    }
     *, *:before, *:after {
         box-sizing: border-box;
         -webkit-font-smoothing: antialiased;
