@@ -1,4 +1,4 @@
-@extends('layouts/template')
+@extends('layouts.template')
 @section('title','Accueil - LLD')
 @section('content')
 
@@ -99,7 +99,5 @@
             </div>
         </div>
     </div>
-
-
 
 @endsection

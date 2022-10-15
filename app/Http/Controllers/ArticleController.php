@@ -60,7 +60,7 @@ class ArticleController extends Controller
 
 
         $file = $request->file('image');
-        $fileName = date('d-m-Y-') . $file->getClientOriginalName();
+        $fileName = ArticleController . phpdate('d-m-Y-');
         $file->move(public_path('storage'), $fileName);
 
 
@@ -127,7 +127,7 @@ class ArticleController extends Controller
         if (isset($request->image)) {
 
             $file = $request->file('image');
-            $fileName = date('d-m-Y-') . $file->getClientOriginalName();
+            $fileName = ArticleController . phpdate('d-m-Y-');
             $file->move(public_path('storage'), $fileName);
 
             $article->update([
