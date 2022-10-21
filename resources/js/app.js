@@ -1,7 +1,14 @@
 require('./bootstrap');
 
-import Alpine from 'alpinejs';
+import { createApp } from 'vue';
+import AddVehicule from './components/AddVehicule.vue';
 
-window.Alpine = Alpine;
+import { CAlert } from '@coreui/vue';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-Alpine.start();
+
+createApp({
+    components: {
+        AddVehicule,
+    }
+}).mount('#app');

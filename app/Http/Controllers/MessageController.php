@@ -15,7 +15,7 @@ class MessageController extends Controller
     public function index()
     {
         $messages = Message::all();
-        return view('dashboardMessages', compact('messages'));
+        return view('dashboard/messages', compact('messages'));
     }
 
     /**

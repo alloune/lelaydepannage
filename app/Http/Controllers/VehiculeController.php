@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\Vehicule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class ArticleController extends Controller
+class VehiculeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,14 +15,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $vehicules = Article::all();
-        return view('articles', compact('vehicules'));
-    }
-
-    public function indexDashboard()
-    {
-        $vehicules = Article::all();
-        return view('dashboardArticles', compact('vehicules'));
+        $vehicules = Vehicule::all();
+        return view('vehicules', compact('vehicules'));
     }
 
     /**
@@ -44,7 +38,7 @@ class ArticleController extends Controller
     public function store(Request $request)
     {
 
-        $vehicules = Article::all();
+        $vehicules = Vehicule::all();
 
         $validated = $request->validate([
             "model" => 'bail|required|string|max:40',
@@ -60,11 +54,11 @@ class ArticleController extends Controller
 
 
         $file = $request->file('image');
-        $fileName = ArticleController . phpdate('d-m-Y-');
+        $fileName =  $request->input('model').$request->input('brand').$request->input('year)').phpdate('d-m-Y-');
         $file->move(public_path('storage'), $fileName);
 
 
-        Article::create([
+        Vehicule::create([
             "model" => $request->model,
             "brand" => $request->brand,
             "engine" => $request->engine,
@@ -76,7 +70,7 @@ class ArticleController extends Controller
             "ct" => $request->ct,
 
         ]);
-        return redirect(route('dashboard-articles', compact('vehicules')));
+        return redirect(route('dashboard.vehicules', compact('vehicules')));
     }
 
     /**
@@ -108,7 +102,7 @@ class ArticleController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, Vehicule $article)
     {
 
 
@@ -127,7 +121,7 @@ class ArticleController extends Controller
         if (isset($request->image)) {
 
             $file = $request->file('image');
-            $fileName = ArticleController . phpdate('d-m-Y-');
+            $fileName = phpdate('d-m-Y-');
             $file->move(public_path('storage'), $fileName);
 
             $article->update([
@@ -142,7 +136,7 @@ class ArticleController extends Controller
                 "ct" => $request->input('ct'),
             ]);
         }
-        return redirect(route('dashboard-articles'));
+        return redirect(route('dashboard.vehicules'));
     }
 
     /**
@@ -151,7 +145,7 @@ class ArticleController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy(Vehicule $article)
     {
         Storage::delete($article->image);
         $article->delete();

@@ -36,7 +36,7 @@
     <a id="closeBtn" href="#" class="close">×</a>
     <ul>
         <li><a href="{{ route('index') }}">Accueil</a></li>
-        <li><a href="{{ route('articles.index') }}">Nos véhicules</a></li>
+        <li><a href="{{ route('vehicules.index') }}">Nos véhicules</a></li>
         <li><a href="{{ route('contact') }}">Contact</a></li>
     </ul>
 </div>
@@ -60,7 +60,7 @@
            <a href="{{ route('index') }}"> <img src="{{ asset('logo.png') }}"></a>
         </div>
         <div class="link">
-            <a href="{{ route("articles.index") }}">Véhicules</a>
+            <a href="{{ route("vehicules.index") }}">Véhicules</a>
             <a href="{{ route("contact") }}">Contact</a>
         </div>
 

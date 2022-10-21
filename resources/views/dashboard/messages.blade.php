@@ -1,4 +1,4 @@
-@extends('layouts/templateDashboard')
+@extends('dashboard.layout.template')
 @section('title','Dashboard - Le Lay dépannage')
 @section('content')
 
@@ -16,7 +16,6 @@
                 <th scope="col">Effacer</th>
 
 
-
             </tr>
             </thead>
             <tbody>
@@ -29,17 +28,18 @@
                     <td>{{ $message->sujet }}</td>
                     <td>{{ $message->created_at }}</td>
                     <td>{{ $message->message }}</td>
-                    <th scope="col"><form method="post" action="{{ route('messages.destroy', ['message'=>$message->id]) }}">
+                    <th scope="col">
+                        <form method="post" action="{{ route('messages.destroy', ['message'=>$message->id]) }}">
                             @csrf
                             @method('DELETE')
                             <input class="btn btn-danger" type="submit" value="Supprimer">
-                        </form></th>
+                        </form>
+                    </th>
                 </tr>
             @endforeach
             </tbody>
         </table>
-
     </div>
 
-
 @endsection
+

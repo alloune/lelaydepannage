@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Dashboard\DashboardVehiculeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
-use App\Http\Controllers\ArticleController;
-
+use App\Http\Controllers\VehiculeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,10 +20,10 @@ Route::get('/contact', function () {return view('contact');})->name('contact');
 
 Route::resource('messages', MessageController::class);
 
-Route::resource('articles', ArticleController::class);
+Route::resource('vehicules', VehiculeController::class);
 
-Route::get('/dashboard', function () {return view('dashboard');})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', function () {return view('dashboard/index');})->middleware(['auth'])->name('dashboard');
 Route::get('/dashboard/messages', [MessageController::class, "index"])->middleware(['auth'])->name('dashboard-messages');
-Route::get('/dashboard/vehicules', [ArticleController::class,'indexDashboard'])->middleware(['auth'])->name('dashboard-articles');
+Route::get('/dashboard/vehicules', [DashboardVehiculeController::class,'index'])->middleware(['auth'])->name('dashboard-vehicules');
 
 require __DIR__.'/auth.php';
